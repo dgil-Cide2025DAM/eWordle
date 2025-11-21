@@ -121,7 +121,7 @@ public class Results {
         Results.instance = this;
 
         // Configure window settings.
-        window = new JFrame("Results");
+        window = new JFrame("Resultats");
         window.setLocationRelativeTo(null);
         window.setResizable(false);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -141,7 +141,7 @@ public class Results {
 
         // Add the hint board that displays "Guessing" and word board to the window.
         currentHeight += CONTENT_HEIGHT + CONTENT_MARGIN;
-        JTextField hintBoard = Settings.textInit("Guessing", "Comic Sans MS", JTextField.CENTER,
+        JTextField hintBoard = Settings.textInit("Endevinar", "Comic Sans MS", JTextField.CENTER,
                 Font.PLAIN, CONTENT_MARGIN, currentHeight - CONTENT_MARGIN / 2, CONTENT_WIDTH, CONTENT_MARGIN,
                 30, false, false);
         windowPanel.add(hintBoard);
@@ -158,12 +158,12 @@ public class Results {
 
         // Add two buttons to the window with event handlers respectively.
         currentHeight += CONTENT_HEIGHT + CONTENT_MARGIN;
-        JButton toSettings = Settings.initButton("Setting", CONTENT_MARGIN, currentHeight,
+        JButton toSettings = Settings.initButton("Configuració", CONTENT_MARGIN, currentHeight,
                 (CONTENT_WIDTH - CONTENT_MARGIN) / 2, CONTENT_HEIGHT, 50, event -> {
                     Settings.getInstance().setVisibleStatus(true);
                     window.setVisible(false);
                 });
-        toSettings.setToolTipText("Go back to Preferences page");
+        toSettings.setToolTipText("Torna a la pàgina de Preferències");
         windowPanel.add(toSettings);
         JButton toRestart = Settings.initButton("Restart",
                 CONTENT_MARGIN * 2 + (CONTENT_WIDTH - CONTENT_MARGIN) / 2, currentHeight,
@@ -172,7 +172,7 @@ public class Results {
                             Settings.getCurrentHashtag());
                     window.setVisible(false);
                 });
-        toRestart.setToolTipText("Use current preferences with the same word");
+        toRestart.setToolTipText("Utilitza les preferències actuals amb la mateixa paraula");
         windowPanel.add(toRestart);
 
         // Add share button with its event handler and its reminder to the window.
@@ -182,7 +182,7 @@ public class Results {
                 false, false);
         windowPanel.add(copiedReminder);
         currentHeight += CONTENT_MARGIN;
-        JButton shareResult = Settings.initButton("Share", CONTENT_MARGIN, currentHeight,
+        JButton shareResult = Settings.initButton("Comparteix", CONTENT_MARGIN, currentHeight,
                 CONTENT_WIDTH, CONTENT_HEIGHT, 50, event -> {
                     StringBuilder resultStr = new StringBuilder();
                     resultStr.append("eWordle ").append(isOpenedHelper ? "*" : "").append(isSuccess ? triesUsed : "X")
@@ -240,7 +240,7 @@ public class Results {
         Game.setColor(resultBoard, isSuccess ? new Color(121, 167, 107) : new Color(121, 124, 126),
                 Color.white);
         wordBoard.setText(initWord);
-        triesBoard.setText("Intents utilitzats:" + (isOpenedHelper ? "*" : "") + tries);
+        triesBoard.setText("Intents: " + (isOpenedHelper ? "*" : "") + tries);
         window.setVisible(true);
     }
 }

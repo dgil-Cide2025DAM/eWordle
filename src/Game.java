@@ -155,7 +155,7 @@ public class Game {
         windowPanel.setLayout(null);
 
         //Add hashtag board to the current window panel.
-        JTextField hashtagBoard = Settings.textInit("Hashtag: " + hashtag, "Comic Sans MS",
+        JTextField hashtagBoard = Settings.textInit("Joc: " + hashtag, "Comic Sans MS",
                 JTextField.CENTER, Font.BOLD, CONTENT_MARGIN, 0, CONTENT_WIDTH, CONTENT_MARGIN, 15,
                 false, false);
         windowPanel.add(hashtagBoard);
