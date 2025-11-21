@@ -4,12 +4,12 @@ An extended version of [Wordle](http://nytimes.com/games/wordle) (Mini Project o
 
 ### How to Play
 
-+ Guess the Wordle word in tries just one more than the word length you selected.
-+ Each guess must be a valid word with the length you selected.
-+ For each letter you confirm to enter, it will show:
-    + Green if it is in the word and in the correct spot.
-    + Yellow if it is in the word but in the wrong spot.
-    + Grey if it is not in the word in any spot.
++ Endevina la paraula de Wordle en intents només un més que la longitud de la paraula que has seleccionat.
++ Cada intent ha de ser una paraula vàlida amb la longitud que has seleccionat.
++ Per cada lletra que confirmis inserir, es mostrarà:
++ Verd si està a la paraula i en la posició correcta.
++ Groc si està a la paraula però en la posició incorrecta.
++ Gris si no està a la paraula en cap posició.
 
 ### Complie & Run
 

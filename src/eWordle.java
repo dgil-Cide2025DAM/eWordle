@@ -55,7 +55,7 @@ public class eWordle {
         Settings.getInstance().configSettings(5, "All", wordLengths, wordSources);
         String initResult = Service.getInstance().initService(wordSources, wordLengths);
         if (initResult.length() > 0) {
-            System.out.println("Error while initialization:" + initResult);
+            System.out.println("Error durant la inicialització:" + initResult);
             return;
         }
         Settings.getInstance().setVisibleStatus(true);

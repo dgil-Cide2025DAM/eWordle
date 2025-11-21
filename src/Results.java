@@ -19,12 +19,11 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.util.ArrayList;
+import javax.swing.*;
 
 /**
  * The {@code Results} class manages a result window that enables user to see the result and choose whether to restart
@@ -199,9 +198,9 @@ public class Results {
                     StringSelection stringSelection = new StringSelection(resultStr.toString());
                     Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                     clipboard.setContents(stringSelection, null);
-                    copiedReminder.setText("Copied to clipboard.");
+                    copiedReminder.setText("Copiat al porta-retalls.");
                 });
-        shareResult.setToolTipText("Copy your results to clipboard.");
+        shareResult.setToolTipText("Copia els teus resultats al porta-retalls.");
         windowPanel.add(shareResult);
 
     }
@@ -237,11 +236,11 @@ public class Results {
         this.isOpenedHelper = isOpenedHelper;
         triesUsed = tries;
         window.setLocationRelativeTo(null);
-        resultBoard.setText(isSuccess ? "Success" : "Failed");
+        resultBoard.setText(isSuccess ? "Èxit" : "Ha fallat");
         Game.setColor(resultBoard, isSuccess ? new Color(121, 167, 107) : new Color(121, 124, 126),
                 Color.white);
         wordBoard.setText(initWord);
-        triesBoard.setText("Tries Used:" + (isOpenedHelper ? "*" : "") + tries);
+        triesBoard.setText("Intents utilitzats:" + (isOpenedHelper ? "*" : "") + tries);
         window.setVisible(true);
     }
 }

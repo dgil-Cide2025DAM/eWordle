@@ -19,11 +19,11 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.util.function.Consumer;
+import javax.swing.*;
 
 /**
  * The {@code Setting} class manages a setting window that enables user to configure preferences and start the game via
@@ -351,7 +351,7 @@ public class Settings {
                     text = Service.getInstance().generateRandomWord(wordLength, wordSource);
                     initWordField.setText(text);
                 }
-                if (!text.equals("Not Found")) {
+                if (!text.equals("No trobat")) {
                     errorMessageField.setText("");
                     this.setVisibleStatus(false);
                     Settings.initWord = text;
@@ -362,8 +362,8 @@ public class Settings {
             } else
                 errorMessageField.setText(checkResult);
         } else
-            errorMessageField.setText("Error: The length of Wordle Word is too " +
-                    (text.length() < wordLength ? "small" : "large") + "!");
+            errorMessageField.setText("Error: La longitud de la paraula de Wordle és massa " +
+                    (text.length() < wordLength ? "petit" : "gran") + "!");
     }
 
     /**
@@ -418,7 +418,7 @@ public class Settings {
                 } while (integer > 0);
                 return "#" + reverseHashtag.reverse();
             }
-        return "Hashtag Error: word source not found";
+        return "Error de hashtag: no s'ha trobat la paraula font";
     }
 
     /**
